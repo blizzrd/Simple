@@ -2,7 +2,7 @@
 
     monitor = 0
     follow = mouse
-    geometry = "288x3-130+100"
+    geometry = "288x3-100+100"
     indicate_hidden = yes
     shrink = no
     transparency = 0
@@ -13,7 +13,7 @@
     separator_color = frame
     sort = yes
     idle_threshold = 120
-    border-radius = 15;
+    corner-radius = 15;
 
     ### Text ###
 
