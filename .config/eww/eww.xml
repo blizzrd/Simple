@@ -1,0 +1,308 @@
+<eww>
+  <definitions>
+    <def name="music">
+      <box orientation="v" space-evenly="true">
+          <box class="music"></box>
+        </box>
+    </def>
+
+    <def name="quit_main">
+    <box orientation="v" space-evenly="true">
+        <box class="quit_main-btn" orientation="v" space-evenly="true">
+            <button onclick="eww close system & eww close main & eww close player & eww close profile & eww close music & eww close date & eww close quote & eww close quit_main & eww close shutdown_main & eww close reboot_main & eww close dock_main" style="background-image:url('/home/k/.config/eww/icons/quit.png')"></button>
+        </box>
+    </box>
+    </def>
+    <def name="quote">
+        <box orientation="v" space-evenly="true">
+            <box class="quote">So many books, so little time.</box>
+        </box>
+    </def>
+    <def name="quit_background">
+        <box/>
+    </def>
+    <def name="dock">
+        <box/>
+    </def>
+    <def name="dock_main">
+        <box/>
+    </def>
+    <def name="main">
+        <box/>
+            </def>
+        <def name="launcher">
+        <box orientation="v" space-evenly="true">
+            <box class="launcher-btn" orientation="v" space-evenly="true">
+                <button onclick="eww open-many dock quit firefox spotify youtube atom"></button>
+            </box>
+        </box>
+    </def>
+    <def name="spotify">
+    <box orientation="v" space-evenly="true">
+        <box class="spotify-btn" orientation="v" space-evenly="true">
+            <button onclick="setsid -f spotify" style="background-image:url('/home/k/.config/eww/icons/Play.png')"></button>
+        </box>
+    </box>
+</def>
+<def name="firefox">
+<box orientation="v" space-evenly="true">
+    <box class="firefox-btn" orientation="v" space-evenly="true">
+        <button onclick="setsid -f firefox" style="background-image:url('/home/k/.config/eww/icons/Discovery.png')"></button>
+    </box>
+</box>
+</def>
+<def name="youtube">
+<box orientation="v" space-evenly="true">
+    <box class="youtube-btn" orientation="v" space-evenly="true">
+        <button onclick="sh /home/k/.config/eww/scripts/youtube" style="background-image:url('/home/k/.config/eww/icons/Video.png')"></button>
+    </box>
+</box>
+</def>
+<def name="atom">
+<box orientation="v" space-evenly="true">
+    <box class="atom-btn" orientation="v" space-evenly="true">
+        <button onclick="setsid -f atom" style="background-image:url('/home/k/.config/eww/icons/Edit.png')"></button>
+    </box>
+</box>
+</def>
+<def name="quit">
+<box orientation="v" space-evenly="true">
+    <box class="firefox-btn" orientation="v" space-evenly="true">
+        <button onclick="eww close quit & eww close youtube & eww close firefox & eww close spotify & eww close atom & eww close dock" style="background-image:url('/home/k/.config/eww/icons/Quit.png')"></button>
+    </box>
+</box>
+</def>
+<def name="shutdown">
+<box orientation="v" space-evenly="true">
+    <box class="shutdown-btn" orientation="v" space-evenly="true">
+        <button onclick="shutdown now" style="background-image:url('/home/k/.config/eww/icons/PowerOff.png')"></button>
+    </box>
+</box>
+</def>
+<def name="reboot">
+<box orientation="v" space-evenly="true">
+    <box class="reboot-btn" orientation="v" space-evenly="true">
+        <button onclick="reboot" style="background-image:url('/home/k/.config/eww/icons/Reboot.png')"></button>
+    </box>
+</box>
+</def>
+<def name="shutdown_main">
+<box orientation="v" space-evenly="true">
+    <box class="shutdown_main-btn" orientation="v" space-evenly="true">
+        <button onclick="shutdown now" style="background-image:url('/home/k/.config/eww/icons/PowerOff.png')"></button>
+    </box>
+</box>
+</def>
+<def name="reboot_main">
+<box orientation="v" space-evenly="true">
+    <box class="reboot_main-btn" orientation="v" space-evenly="true">
+        <button onclick="reboot" style="background-image:url('/home/k/.config/eww/icons/Reboot.png')"></button>
+    </box>
+</box>
+</def>
+<def name="quit_power">
+<box orientation="v" space-evenly="true">
+    <box class="quit_power-btn" orientation="v" space-evenly="true">
+        <button onclick="eww close shutdown & eww close reboot & eww close quit_power & eww close quit_background " style="background-image:url('/home/k/.config/eww/icons/quit.png')"></button>
+    </box>
+</box>
+</def>
+<def name="profile">
+    <box orientation="v" space-evenly="true">
+        <box class="pfp"/>
+        <box class="username">Welcome!</box>
+    </box>
+</def>
+<def name="date">
+    <box orientation="v" space-evenly="true">
+        <box orientation="h" class="time">
+            <box class="hour">{{hour}}</box>
+            <box class="semicolon">:</box>
+            <box class="minute">{{minute}}</box>
+        </box>
+        <box class="day">{{day}}</box>
+    </box>
+</def>
+        <def name="player">
+            <box orientation="h" space-evenly="true">
+                <box class="song-data" orientation="v" space-evenly="false">
+                    <box class="song-title">{{song_title}}</box>
+                    <box class="player-btn" orientation="h" halign="center">
+                        <button onclick="playerctl previous"></button>
+                        <button class="pause-play" onclick="playerctl play-pause"></button>
+                        <button onclick="playerctl next"></button>
+                    </box>
+                </box>
+            </box>
+        </def>
+        <def name="system">
+            <box orientation="v" space-evenly="false">
+                <box class="ram-bar" orientation="h">
+                    <box class="label-ram-bar">RAM</box>
+                    <scale min="0" max="101" active="false" value="{{ram}}"></scale>
+                </box>
+                <box class="cpu-bar" orientation="h">
+                    <box class="label-cpu-bar">CPU</box>
+                    <scale min="0" max="101" active="false" value="{{cpu}}"></scale>
+                </box>
+                <box class="vol-bar" orientation="h">
+                    <box class="label-vol-bar">VOL</box>
+                    <scale min="0" max="101" active="false" value="{{volume}}"></scale>
+                </box>
+            </box>
+        </def>
+</definitions>
+
+    <variables>
+      <!-- DATE VARS -->
+      <script-var name="minute" interval="10s">date "+%M"</script-var>
+      <script-var name="hour" interval="5m">date "+%H"</script-var>
+      <script-var name="day" interval="12h">~/.config/eww/scripts/getDay</script-var>
+
+
+        <!-- PLAYER VARS -->
+        <script-var name="art" interval="5s">~/.config/eww/scripts/echoSongArt</script-var>
+        <script-var name="song_title" interval="2s">~/.config/eww/scripts/getSongTitle</script-var>
+
+        <!-- SYSTEM VARS -->
+
+        <script-var name="ram" interval="2s">~/.config/eww/scripts/getUsedRam</script-var>
+        <script-var name="volume" interval="1s">~/.config/eww/scripts/getVolume</script-var>
+        <script-var name="cpu" interval="1s">~/.config/eww/scripts/getCpu</script-var>
+    </variables>
+
+    <windows>
+        <window name="profile">
+            <geometry x="640px" y="300px" width="200px" height="205px"/>
+            <widget>
+                <profile/>
+            </widget>
+        </window>
+        <window name="shutdown">
+            <geometry x="600px" y="400px" width="200px" height="200px"/>
+            <widget>
+                <shutdown/>
+            </widget>
+        </window>
+        <window name="reboot">
+            <geometry x="855px" y="400px" width="200px" height="200px"/>
+            <widget>
+                <reboot/>
+            </widget>
+        </window>
+        <window name="quit_power">
+            <geometry x="1105px" y="400px" width="200px" height="200px"/>
+            <widget>
+                <quit_power/>
+            </widget>
+        </window>
+        <window name="dock_main">
+            <geometry x="1222px" y="296px" width="60px" height="210px"/>
+            <widget>
+                <dock_main/>
+            </widget>
+        </window>
+        <window name="quit_main">
+            <geometry x="1212px" y="437px" width="80px" height="80px"/>
+            <widget>
+                <quit_main/>
+            </widget>
+        </window>
+        <window name="quit">
+            <geometry x="1109px" y="965px" width="60px" height="60px"/>
+            <widget>
+                <quit/>
+            </widget>
+        </window>
+        <window name="shutdown_main">
+            <geometry x="1212px" y="287px" width="80px" height="80px"/>
+            <widget>
+                <shutdown_main/>
+            </widget>
+        </window>
+        <window name="reboot_main">
+            <geometry x="1212px" y="363px" width="80px" height="80px"/>
+            <widget>
+                <reboot_main/>
+            </widget>
+        </window>
+        <window name="dock">
+            <geometry x="738px" y="950px" width="450px" height="90px"/>
+            <widget>
+                <dock/>
+            </widget>
+        </window>
+        <window name="quit_background">
+            <geometry x="0px" y="0px" width="1920px" height="1080px"/>
+            <widget>
+                <quit_background/>
+            </widget>
+        </window>
+        <window name="main">
+            <geometry x="610px" y="278px" width="700px" height="490px"/>
+            <widget>
+                <main/>
+            </widget>
+        </window>
+        <window name="date">
+            <geometry x="880px" y="299px" width="310px" height="100px"/>
+            <widget>
+                <date/>
+            </widget>
+        </window>
+        <window name="quote">
+            <geometry x="880px" y="455px" width="310px" height="50px"/>
+            <widget>
+                <quote/>
+            </widget>
+        </window>
+        <window name="firefox">
+            <geometry x="761px" y="965px" width="60px" height="60px"/>
+            <widget>
+                <firefox/>
+            </widget>
+        </window>
+        <window name="spotify">
+            <geometry x="850px" y="965px" width="60px" height="60px"/>
+            <widget>
+                <spotify/>
+            </widget>
+        </window>
+        <window name="youtube">
+            <geometry x="938px" y="965px" width="60px" height="60px"/>
+            <widget>
+                <youtube/>
+            </widget>
+        </window>
+        <window name="atom">
+            <geometry x="1026px" y="965px" width="60px" height="60px"/>
+            <widget>
+                <atom/>
+            </widget>
+        </window>
+        <window name="player">
+            <geometry x="1080px" y="539px" width="200px" height="200px"/>
+            <widget>
+                <player/>
+            </widget>
+        </window>
+        <window name="music">
+            <geometry x="1135px" y="545px" width="90px" height="90px"/>
+            <widget>
+                <music/>
+            </widget>
+        </window>
+        <window name="launcher">
+            <geometry x="865px" y="1070px" width="200px" height="80px"/>
+            <widget>
+                <launcher/>
+            </widget>
+        </window>
+        <window name="system">
+            <geometry x="640px" y="540px" width="400px" height="200px"/>
+            <widget>
+                <system/>
+            </widget>
+        </window>
+    </windows>
+</eww>

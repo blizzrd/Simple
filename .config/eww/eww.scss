@@ -1,0 +1,248 @@
+* {
+    all: unset;
+}
+
+.quote {
+  background-color: #fafafa;
+  border-radius: 15px;
+  font-family: "Roboto";
+  font-size: 20px;
+  font-weight: 400;
+  color: #2e2e2e;
+}
+
+.quit_background {
+  background-color: #fafafa;
+}
+
+.main {
+  background-color: #fafafa;
+  border-radius: 20px;
+}
+
+.dock {
+  background-color: #fafafa;
+  border-radius: 15px;
+}
+
+.eww_main {
+  background-image: url("/home/k/.config/eww/images/Wallpaper.png");
+}
+
+.ground {
+  background-image: url("/home/k/.config/eww/images/Background.jpg");
+  background-size: 1920px;
+}
+
+.titlebar {
+    color: #AAC9CE;
+    font-size: 20px;
+    font-weight: bolder;
+
+    margin-top: -685px;
+    margin-left: -20px;
+}
+
+.profile {
+  background-color: #fafafa;
+      border-radius: 15px;
+}
+
+  .pfp {
+      background-image: url("/home/k/.config/eww/images/Profile.png");
+      background-size: 100px;
+
+      margin-top: 30px;
+      margin-bottom: -30px;
+      margin-left: 52px;
+      margin-right: 45px;
+
+      border-radius: 0px;
+  }
+
+  .username {
+      margin-bottom: -20px;
+      font-family: "Roboto";
+      color: #505050;
+      font-size: 25px;
+      font-weight: bold;
+  }
+
+
+.player {
+  background-color: #fafafa;
+  border-radius: 15px;
+}
+
+.song-data {
+    font-size: 12px;
+    font-weight: bold;
+
+    margin: 105px 0px 0px 0px;
+}
+
+.song-title {
+    font-family: "Roboto";
+    font-size: 15px;
+    font-weight: normal;
+    color: #2e2e2e;
+    padding-right: 0px;
+}
+
+.date {
+  background-color: #fafafa;
+  border-radius: 15px;
+}
+
+.time {
+    margin: 15px 60px -30px 65px;
+    font-size: 50px;
+    font-family: "Roboto";
+    color: #2e2e2e;
+}
+
+.semicolon {
+    margin: 0px;
+    margin-top: -5px;
+    color: #7b3aff;
+    font-family: "Roboto";
+}
+
+.day {
+    margin-top: 19px;
+    margin-bottom: 16px;
+    padding-top: 10px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #5b5b5b;
+    font-family: "Roboto";
+}
+
+
+.music {
+  background-image: url("/home/k/.config/eww/images/Spotify.png");
+  background-size: 90px;
+}
+
+.player-btn {
+    padding: 35px 0px 0px 30px;
+    margin-top: -5px;
+}
+
+.player-btn button {
+    font-family: "Font Awesome 5 Free";
+    color: #7b3aff;
+    font-size: 16px;
+    font-weight: normal;
+    padding-right: 30px;
+}
+
+.player-btn button:hover {
+    color: #8f3aff;
+}
+
+.system {
+    background-color: #fafafa;
+    border-radius: 15px;
+}
+
+.system slider {
+    all: unset;
+}
+
+.label-ram-bar, .label-vol-bar, .label-cpu-bar {
+    font-size: 23px;
+    font-weight: 600;
+    font-family: "Roboto";
+    margin-top: 0px;
+    margin-left: -65px;
+}
+
+.label-ram-bar {
+    margin-left: -81px;
+    margin-top: 15px;
+    color: #2e2e2e;
+}
+
+.label-vol-bar {
+    margin-bottom: 9px;
+    margin-left: -86px;
+    color: #2e2e2e;
+}
+
+.label-cpu-bar {
+  margin-bottom: 9px;
+  margin-left: -86px;
+    color: #2e2e2e;
+}
+
+
+ .vol-bar scale trough highlight {
+ all: unset;
+ background-image: linear-gradient(to right, #7b3aff, #9442ff);
+ color: #393939;
+ border-radius: 50px;
+ }
+
+.ram-bar scale trough highlight {
+ all: unset;
+ background-image: linear-gradient(to right, #7b3aff, #9442ff);
+ color: #393939;
+ border-radius: 50px;
+ }
+
+.cpu-bar scale trough highlight {
+  all: unset;
+  background-image: linear-gradient(to right, #7b3aff, #9442ff);
+  color: #393939;
+  border-radius: 50px;
+  }
+
+.ram-bar scale trough {
+	all: unset;
+	background-color: #e5e5e5;
+	border-radius: 30px;
+
+	min-height: 25px;
+    min-width: 180px;
+
+    margin: 32px 30px 20px -85px;
+}
+
+.vol-bar scale trough, .cpu-bar scale trough {
+	all: unset;
+	background-color: #e5e5e5;
+	border-radius: 30px;
+
+	min-height: 25px;
+    min-width: 20px;
+
+    margin: 10px 30px 20px -85px;
+}
+
+.youtube button, .firefox button, .quit button, .atom button, .spotify button {
+  background-size: 60px;
+}
+
+.launcher {
+	background-color: #7b3aff;
+  border-radius: 15px;
+}
+
+.launcher-btn {
+  font-size: 30px;
+  padding-bottom: 30px;
+}
+
+.shutdown button, .reboot button, .quit_power button {
+  background-size: 200px;
+}
+
+.shutdown_main button, .reboot_main button, .quit_main button {
+  background-size: 80px;
+}
+
+.dock_main {
+  background-color: #fafafa;
+  border-radius: 15px;
+}
